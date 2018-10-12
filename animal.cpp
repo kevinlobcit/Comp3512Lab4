@@ -59,6 +59,7 @@ std::ostream& operator<<(std::ostream& os, animal animalIn)
     os << "Age: " << animalIn.age << std::endl;
     os << "X Coordinate: " << animalIn.coordX << std::endl;
     os << "Y Coordinate: " << animalIn.coordY << std::endl;
+    os << "Alive: " << animalIn.alive << std::endl;
     os << "ID: " << animalIn.id << std::endl;
 }
 

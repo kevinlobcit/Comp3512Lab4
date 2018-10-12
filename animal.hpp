@@ -9,7 +9,7 @@
 
 
 class animal {
-private:
+protected:
     int age;
 
     static long idCount;
@@ -30,7 +30,7 @@ public:
     virtual void move(double, double);
     virtual void sleep();
     virtual void eat();
-    friend std::ostream& operator<<(std::ostream& os, animal animalIn);
+    friend std::ostream& operator<<(std::ostream& os, animal);
 
 
 
