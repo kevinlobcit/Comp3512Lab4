@@ -5,6 +5,8 @@
 #ifndef COMP3512LAB4_ANIMAL_HPP
 #define COMP3512LAB4_ANIMAL_HPP
 
+#include <iostream>
+
 
 class animal {
 private:
@@ -22,11 +24,13 @@ private:
 public:
     animal();
     animal(int, double, double);
-    animal(animal);
-    ~animal();
-
+    animal(const animal&);
+    virtual ~animal();
 
     virtual void move(double, double);
+    virtual void sleep();
+    virtual void eat();
+    friend std::ostream& operator<<(std::ostream& os, animal animalIn);
 
 
 

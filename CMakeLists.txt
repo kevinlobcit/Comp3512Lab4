@@ -3,4 +3,4 @@ project(Comp3512Lab4)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Comp3512Lab4 inheritane.cpp animal.cpp animal.hpp)
+add_executable(Comp3512Lab4 inheritance.cpp animal.cpp animal.hpp bird.cpp bird.hpp)
