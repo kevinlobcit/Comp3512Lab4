@@ -6,11 +6,13 @@
 
 bird::bird()
 {
+    std::cout << "Constructing bird" << std::endl;
     height = 0;
 }
 
 bird::bird(int ageIn, double xCoord, double yCoord, double heightIn)
 {
+    std::cout << "Constructing bird" << std::endl;
     age = ageIn;
     coordX = xCoord;
     coordY = yCoord;
@@ -21,6 +23,7 @@ bird::bird(int ageIn, double xCoord, double yCoord, double heightIn)
 
 bird::bird(const bird& bird2)
 {
+    std::cout << "Constructing bird" << std::endl;
     age = bird2.age;
     coordX = bird2.coordX;
     coordY = bird2.coordY;
@@ -32,6 +35,7 @@ bird::bird(const bird& bird2)
 bird::~bird()
 {
 
+    std::cout << "deConstructing bird" << std::endl;
 }
 
 void bird::move(double xCoord, double yCoord, double heightIn)
@@ -58,7 +62,7 @@ std::ostream& bird::print(std::ostream& os) const
     os << "X Coordinate: " << coordX << std::endl;
     os << "Y Coordinate: " << coordY << std::endl;
     os << "Height: " << height << std::endl;
-    os << "Alive" << alive << std::endl;
+    os << "Alive: " << alive << std::endl;
     os << "ID: " << id << std::endl;
     return os;
 }

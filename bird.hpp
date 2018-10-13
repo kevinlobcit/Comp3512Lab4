@@ -17,16 +17,16 @@ private:
 
 
 public:
-    bird();
-    bird(int, double, double, double);
-    bird(const bird&);
-    ~bird() override;
-    void move(double,double,double);
-    void sleep() override;
-    void eat() override;
+    bird(); //default bird constructor
+    bird(int, double, double, double); //bird constructor using int age 2 double coordinates and 1 double height
+    bird(const bird&); //bird copy constructor
+    ~bird() override; //bird deconstructor
+    void move(double,double,double); //bird movement using 2 double coordinates and 1 double height
+    void sleep() override; //bird sleep action
+    void eat() override; //bird eat action
 
-    virtual std::ostream& print(std::ostream& os) const;
-    friend std::ostream& operator<<(std::ostream&, const bird&);
+    virtual std::ostream& print(std::ostream& os) const; //used for printing for the << operator override
+    friend std::ostream& operator<<(std::ostream&, const bird&);//overrides the << operator to print
 
 
 };

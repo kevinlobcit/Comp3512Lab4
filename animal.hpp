@@ -22,17 +22,17 @@ protected:
 
 
 public:
-    animal();
-    animal(int, double, double);
-    animal(const animal&);
-    virtual ~animal();
+    animal(); //Default animal constuctor
+    animal(int, double, double); //animal constructor needing int age, and 2 double coordinates
+    animal(const animal&); //an animal copy constructor
+    virtual ~animal(); //an animal deconstructor
 
-    virtual void move(double, double);
-    virtual void sleep();
-    virtual void eat();
+    virtual void move(double, double); //makes the animal move using 2 double coordinates
+    virtual void sleep(); //animal sleep action
+    virtual void eat(); //animal eat action
 
-    virtual std::ostream& print(std::ostream& os) const;
-    friend std::ostream& operator<<(std::ostream& os, const animal&);
+    virtual std::ostream& print(std::ostream& os) const; //used for printing for the << operator override
+    friend std::ostream& operator<<(std::ostream& os, const animal&); //overrides the << operator to print
 
 
 

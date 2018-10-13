@@ -7,6 +7,7 @@
 
 canine::canine()
 {
+    std::cout << "Constructing canine" << std::endl;
     age = 0;
     alive = true;
     coordX = 0;
@@ -16,6 +17,7 @@ canine::canine()
 
 canine::canine(int ageIn, double xCoord, double yCoord)
 {
+    std::cout << "Constructing canine" << std::endl;
     age = age;
     alive = true;
     coordX = xCoord;
@@ -25,6 +27,7 @@ canine::canine(int ageIn, double xCoord, double yCoord)
 
 canine::canine(const canine& canine2)
 {
+    std::cout << "Constructing canine" << std::endl;
     age = canine2.age;
     coordX = canine2.coordX;
     coordY = canine2.coordY;
@@ -34,7 +37,7 @@ canine::canine(const canine& canine2)
 
 canine::~canine()
 {
-
+    std::cout << "deConstructing canine" << std::endl;
 }
 
 void canine::move(double xCoord, double yCoord)
@@ -45,17 +48,17 @@ void canine::move(double xCoord, double yCoord)
 
 void canine::sleep()
 {
-    std::cout << "Dog sleep" << std::endl;
+    std::cout << "canine sleep" << std::endl;
 }
 
 void canine::eat()
 {
-    std::cout << "Dog eat" << std::endl;
+    std::cout << "canine eat" << std::endl;
 }
 
 void canine::hunt()
 {
-    std::cout << "Dog hunt" << std::endl;
+    std::cout << "canine hunt" << std::endl;
 }
 
 std::ostream& canine::print(std::ostream& os) const

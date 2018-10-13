@@ -8,6 +8,7 @@ long animal::idCount = 0;
 
 animal::animal()
 {
+    std::cout << "Constructing animal" << std::endl;
     age = 0;
     alive = true;
     coordX = 0;
@@ -17,6 +18,7 @@ animal::animal()
 
 animal::animal(int ageIn, double xCoord, double yCoord)
 {
+    std::cout << "Constructing animal" << std::endl;
     age = ageIn;
     coordX = xCoord;
     coordY = yCoord;
@@ -26,6 +28,7 @@ animal::animal(int ageIn, double xCoord, double yCoord)
 
 animal::animal(const animal& animal2)
 {
+    std::cout << "Constructing animal" << std::endl;
     age = animal2.age;
     alive = animal2.alive;
     coordX = animal2.coordX;
@@ -35,7 +38,7 @@ animal::animal(const animal& animal2)
 
 animal::~animal()
 {
-
+    std::cout << "deConstructing animal" << std::endl;
 }
 
 void animal::move(double xCoord, double yCoord)

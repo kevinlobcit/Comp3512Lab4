@@ -9,7 +9,13 @@ int main() {
     animal *bird1 = new bird(2,3,4,5);
     animal *canine1 = new canine(2,3,4);
 
-    animal1.move(5,6);
+    animal1->move(5,6);
+    dynamic_cast<bird*>(bird1)->move(5,6,7);
+    canine1->move(5,6);
+
+    animal1->sleep();
+    bird1->sleep();
+    canine1->sleep();
 
     animal1->eat();
     bird1->eat();
