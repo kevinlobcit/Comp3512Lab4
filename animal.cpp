@@ -54,13 +54,20 @@ void animal::eat()
     std::cout << "Eating" << std::endl;
 }
 
-std::ostream& operator<<(std::ostream& os, animal animalIn)
+std::ostream& animal::print(std::ostream& os) const
 {
-    os << "Age: " << animalIn.age << std::endl;
-    os << "X Coordinate: " << animalIn.coordX << std::endl;
-    os << "Y Coordinate: " << animalIn.coordY << std::endl;
-    os << "Alive: " << animalIn.alive << std::endl;
-    os << "ID: " << animalIn.id << std::endl;
+    os << "Animal" << std::endl;
+    os << "Age: " << age << std::endl;
+    os << "X Coordinate: " << coordX << std::endl;
+    os << "Y Coordinate: " << coordY << std::endl;
+    os << "Alive: " << alive << std::endl;
+    os << "ID: " << id << std::endl;
+    return os;
+}
+
+std::ostream& operator<<(std::ostream& os, const animal& animalIn)
+{
+    return animalIn.print(os);
 }
 
 

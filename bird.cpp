@@ -15,7 +15,7 @@ bird::bird(int ageIn, double xCoord, double yCoord, double heightIn)
     coordX = xCoord;
     coordY = yCoord;
     alive = true;
-    id = animal::idCount++;
+    id = animal::idCount;
     height = heightIn;
 }
 
@@ -51,13 +51,20 @@ void bird::eat()
     std::cout << "Bird eat" << std::endl;
 }
 
-std::ostream& operator<<(std::ostream& os, bird birdIn)
+std::ostream& bird::print(std::ostream& os) const
 {
-    os << "Age: " << birdIn.age << std::endl;
-    os << "X Coordinate: " << birdIn.coordX << std::endl;
-    os << "Y Coordinate: " << birdIn.coordY << std::endl;
-    os << "Height: " << birdIn.height << std::endl;
-    os << "Alive" << birdIn.alive << std::endl;
-    os << "ID: " << birdIn.id << std::endl;
+    os << "Bird " << std::endl;;
+    os << "Age: " << age << std::endl;
+    os << "X Coordinate: " << coordX << std::endl;
+    os << "Y Coordinate: " << coordY << std::endl;
+    os << "Height: " << height << std::endl;
+    os << "Alive" << alive << std::endl;
+    os << "ID: " << id << std::endl;
+    return os;
+}
+
+std::ostream& operator<<(std::ostream& os, const bird& birdIn)
+{
+    return birdIn.print(os);
 }
 

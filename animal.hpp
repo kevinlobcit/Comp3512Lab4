@@ -30,7 +30,9 @@ public:
     virtual void move(double, double);
     virtual void sleep();
     virtual void eat();
-    friend std::ostream& operator<<(std::ostream& os, animal);
+
+    virtual std::ostream& print(std::ostream& os) const;
+    friend std::ostream& operator<<(std::ostream& os, const animal&);
 
 
 
